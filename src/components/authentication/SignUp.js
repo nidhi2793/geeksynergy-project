@@ -20,13 +20,13 @@ const defaultTheme = createTheme();
 
 export default function SignUp() {
   const professions = [
-    "Lawyer",
-    "Engineer",
-    "Doctor",
-    "Education",
-    "Business",
-    "Home Maker",
-    "Other",
+    { id: 1, title: "Lawyer" },
+    { id: 2, title: "Engineer" },
+    { id: 3, title: "Doctor" },
+    { id: 4, title: "Education" },
+    { id: 5, title: "Business" },
+    { id: 6, title: "Home Maker" },
+    { id: 7, title: "Other" },
   ];
 
   const [profession, setProfession] = useState("");
@@ -156,7 +156,9 @@ export default function SignUp() {
                 onChange={handleProfession}
               >
                 {professions.map((prof) => (
-                  <MenuItem value={prof}>{prof}</MenuItem>
+                  <MenuItem value={prof.title} key={prof.id}>
+                    {prof.title}
+                  </MenuItem>
                 ))}
               </TextField>
 

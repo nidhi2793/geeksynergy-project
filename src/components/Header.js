@@ -8,12 +8,14 @@ import Button from "@mui/material/Button";
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ bgcolor: "#0C356A" }}>
+      <AppBar
+        position="static"
+        sx={{ bgcolor: "#0C356A", alignItems: "center" }}
+      >
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Geeksynergy Technologies Pvt Ltd
           </Typography>
-          <Button color="inherit">Company Info</Button>
         </Toolbar>
       </AppBar>
     </Box>
