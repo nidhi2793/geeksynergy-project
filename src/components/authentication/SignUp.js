@@ -11,10 +11,10 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { MuiTelInput } from "mui-tel-input";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 const defaultTheme = createTheme();
 
@@ -29,6 +29,8 @@ export default function SignUp() {
     { id: 7, title: "Other" },
   ];
 
+  const navigate = useNavigate();
+
   const [profession, setProfession] = useState("");
   const [enteredName, setName] = useState("");
   const [enteredEmail, setEmail] = useState("");
@@ -42,7 +44,18 @@ export default function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (enteredPass.length < 6) {
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+
+    console.log(validateEmail(enteredEmail));
+    if (validateEmail(enteredEmail) == false) {
+      toast("Enter a valid email id", {
+        type: "error",
+        theme: "colored",
+      });
+    } else if (enteredPass.length < 6) {
       toast("Password should of atleast 6 characters", {
         type: "error",
         theme: "colored",
@@ -56,11 +69,21 @@ export default function SignUp() {
           phone: enteredPhone,
           profession,
         };
-        localStorage.setItem("userinfo", JSON.stringify(userData));
-        toast("User Registered Successfully !", {
-          type: "success",
-          theme: "colored",
-        });
+        if (localStorage.getItem(enteredEmail) != null) {
+          toast("Email id already registered", {
+            type: "error",
+            theme: "colored",
+          });
+        } else {
+          localStorage.setItem(enteredEmail, JSON.stringify(userData));
+          toast("User Registered Successfully !", {
+            type: "success",
+            theme: "colored",
+          });
+          setTimeout(() => {
+            navigate("/login");
+          }, 1000);
+        }
       } catch (error) {
         console.log(error);
       }
@@ -108,6 +131,7 @@ export default function SignUp() {
               />
               <TextField
                 type={"email"}
+                slotProps={{ input: { type: "email" } }}
                 margin="dense"
                 required
                 fullWidth
@@ -154,6 +178,7 @@ export default function SignUp() {
                 select
                 label="Profession"
                 onChange={handleProfession}
+                sx={{ textAlign: "left" }}
               >
                 {professions.map((prof) => (
                   <MenuItem value={prof.title} key={prof.id}>
