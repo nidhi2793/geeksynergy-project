@@ -1,31 +1,45 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import MovieCard from "./MoviCard/MovieCard";
+import { Container } from "@mui/material";
 
 function Home() {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
 
-    useEffect(()=>{
-        const data = { category:"movies",language:"kannada",genre:"all",sort:"voting" };
+  useEffect(() => {
+    const parameter = {
+      category: "movies",
+      language: "kannada",
+      genre: "all",
+      sort: "voting",
+    };
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.post(
+          "https://hoblist.com/api/movieList",
+          parameter
+        );
+        setData(response.data.result);
+        console.log("response", response.data.result);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    };
 
-        fetch('https://hoblist.com/api/movieList', {
-          method: 'POST', 
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-    },[])
+    fetchData();
+  }, []);
+  console.log("data", data);
 
   return (
-    <div>
-     Home 
-    </div>
-  )
+    <Container maxWidth="lg" sx={{ marginTop: 10 }}>
+      {data.map((movie) => (
+        <MovieCard movie={movie} />
+      ))}
+    </Container>
+  );
 }
 
 export default Home;

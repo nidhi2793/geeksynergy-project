@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 350px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  
+}
+.upperContainer{
+    display:flex;
+    flex-direction: row;
+    flex:10;
+    /* background-color: aqua; */
+    
+
+}
+.lowerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:2;
+    /* background-color: #44444d; */
+    
+}
+
+.btn{
+    color: white;
+    background-color: #39A7FF;
+    border: none;
+    width:95%;
+    padding:7px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.votesContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:2;
+    /* background-color: yellow; */
+    padding: 5px;
+}
+.votesCount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:10;
+    font-size: x-large;
+}
+.votes{
+    margin: 5px;
+    color: rgb(81, 78, 78);
+
+}
+.poster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 4;
+   
+    /* background-color: green; */
+    
+}
+.image{
+    width: 90%; 
+    height: 90%;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.description{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background: red; */
+    padding: 8px;
+    margin-top: 5px;
+    text-align: left;
+    line-height: 30px;
+    
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    flex: 8;
+}
+.title{
+    color: black;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.heading{
+    color: darkgrey;
+    font-weight: bold;
+}
+.bottom{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+.views{
+    color: skyblue;
+    
+}
+
+
+
+@media (max-width: 750px) {
+  .movieCard {
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
+@media(max-width:400px){
+.votesContainer{
+    max-width: 25px;
+}
+.votes{
+    font-size: x-small;
+}
+    
+}
