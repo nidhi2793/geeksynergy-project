@@ -7,6 +7,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
+  //fetching data from api using post method
   useEffect(() => {
     const parameter = {
       category: "movies",
@@ -22,7 +23,6 @@ function Home() {
           parameter
         );
         setData(response.data.result);
-        console.log("response", response.data.result);
       } catch (error) {
         console.error(error.message);
       }
@@ -31,7 +31,6 @@ function Home() {
 
     fetchData();
   }, []);
-  console.log("data", data);
 
   return (
     <Container maxWidth="lg" sx={{ marginTop: 10 }}>
