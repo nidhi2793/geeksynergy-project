@@ -1,71 +1,37 @@
-# Getting Started with Create React App
+Assignment By Geeksynergy.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.Created a signup page with Name, Email, Password, Phone number, Profession (Dropdown).
+Credentials are saved in local storage after validation. Using array of objects it can register multi users.
 
-## Available Scripts
+<img width="960" alt="signup" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/b14b51ca-74a0-40aa-8fe3-4921920fe7b9">
 
-In the project directory, you can run:
+2. Login Page which will acces local storage to authenticate user and in case of wrong crediantials will give error. If credentials are correct it wil
+redirect to Home page.
 
-### `npm start`
+<img width="959" alt="login" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/c619729f-8184-4294-afb7-a374841f8b00">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If user is not registered.
+<img width="958" alt="email not registered" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/12da8ea9-362c-4e92-854f-97a9d2955339">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If password is wrong.
+<img width="960" alt="wrong password" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/82d9888c-2f13-46fb-932c-fd6f4381fff0">
 
-### `npm test`
+3. Scrollable Home Page with Movie list.
+<img width="960" alt="wrong password" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/c0bf7cb7-6a90-45f0-a2ba-1b2fca387413">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. On clicking company info in Header, Modal with company details will open.
+<img width="960" alt="company info" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/acac4695-b50e-4a71-8bee-9fa0b4633b30">
 
-### `npm run build`
+5. On logout, user will be redirected back to log in page and in local storage their will be no logged in user.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # geeksynergy-project
