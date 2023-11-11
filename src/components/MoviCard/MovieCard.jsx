@@ -4,12 +4,13 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function MovieCard({ movie }) {
+  //converting timestam to required date format
   const handleReleaseDate = (movie) => {
-    var timestamp = movie.releasedDate;
-    var milliseconds = timestamp * 1000;
-    var date = new Date(milliseconds);
-    var options = { day: "numeric", month: "short" };
-    var formattedDate = date.toLocaleDateString("en-US", options);
+    let timestamp = movie.releasedDate;
+    let milliseconds = timestamp * 1000;
+    let date = new Date(milliseconds);
+    let options = { day: "numeric", month: "short" };
+    let formattedDate = date.toLocaleDateString("en-US", options);
     return formattedDate;
   };
 

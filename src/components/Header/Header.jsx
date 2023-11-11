@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,9 +9,11 @@ import CompanyDetails from "../CompanyDetails";
 import "./Header.css";
 
 export default function Header() {
-  const [open, setOpen] = React.useState(false);
+  //state for mcompany info modal
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
   const navigate = useNavigate();
 
   //logout function
@@ -20,6 +22,7 @@ export default function Header() {
     navigate("/login", { replace: true });
   };
 
+  //checking if any user is logged in
   const LoggedIn = localStorage.getItem("loggedIn");
 
   return (

@@ -12,7 +12,6 @@ import Container from "@mui/material/Container";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header/Header";
 
 export default function Login() {
   const navigate = useNavigate();

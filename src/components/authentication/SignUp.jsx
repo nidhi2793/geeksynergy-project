@@ -14,7 +14,6 @@ import { MuiTelInput, matchIsValidTel } from "mui-tel-input";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header/Header";
 
 export default function SignUp() {
   //array for profession dropdown

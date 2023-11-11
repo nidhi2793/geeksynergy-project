@@ -4,6 +4,7 @@ import SignUp from "./components/authentication/SignUp";
 import Login from "./components/authentication/Login";
 import Home from "./components/Home";
 
+//checking if any user is loggedin based on it either signup or home page will open
 const LoggedIn = localStorage.getItem("loggedIn");
 
 function App() {
