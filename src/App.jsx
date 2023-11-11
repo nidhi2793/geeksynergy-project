@@ -1,6 +1,6 @@
 import { Routes, Route, useState } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import SignUp from "./components/authentication/SignUp";
 import Login from "./components/authentication/Login";
 import Home from "./components/Home";
