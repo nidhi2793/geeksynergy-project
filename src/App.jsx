@@ -1,5 +1,4 @@
-import { Routes, Route, useState } from "react-router-dom";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import SignUp from "./components/authentication/SignUp";
 import Login from "./components/authentication/Login";
@@ -9,7 +8,7 @@ const LoggedIn = localStorage.getItem("loggedIn");
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Routes>
         {LoggedIn && <Route path="/" element={<Home />} />}
