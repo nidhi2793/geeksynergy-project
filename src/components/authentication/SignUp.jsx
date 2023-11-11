@@ -167,6 +167,7 @@ export default function SignUp() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
+              autoComplete="new-password"
               margin="dense"
               required
               fullWidth
