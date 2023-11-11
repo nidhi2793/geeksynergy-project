@@ -17,12 +17,16 @@ If password is wrong.
 <img width="960" alt="wrong password" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/82d9888c-2f13-46fb-932c-fd6f4381fff0">
 
 3. Scrollable Home Page with Movie list.
-<img width="960" alt="wrong password" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/c0bf7cb7-6a90-45f0-a2ba-1b2fca387413">
+<img width="960" alt="home" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/1c23538e-d225-4dbb-bfbd-60b72d1e7f00">
+
 
 4. On clicking company info in Header, Modal with company details will open.
 <img width="960" alt="company info" src="https://github.com/nidhi2793/geeksynergy-project/assets/125755965/acac4695-b50e-4a71-8bee-9fa0b4633b30">
 
 5. On logout, user will be redirected back to log in page and in local storage their will be no logged in user.
+   
+
+Tech Stack: HTML | JavaScript | CSS | ReactJs | Material UI 
 
 
 
