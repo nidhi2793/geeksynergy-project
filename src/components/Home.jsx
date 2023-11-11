@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "./MoviCard/MovieCard";
 import { Container } from "@mui/material";
+import Header from "./Header/Header";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -15,12 +16,16 @@ function Home() {
       genre: "all",
       sort: "voting",
     };
+    const headers = {
+      "Access-Control-Allow-Origin": "*",
+    };
     const fetchData = async () => {
       setLoading(true);
       try {
         const response = await axios.post(
           "https://hoblist.com/api/movieList",
-          parameter
+          parameter,
+          { headers }
         );
         setData(response.data.result);
       } catch (error) {
