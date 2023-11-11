@@ -96,6 +96,7 @@ export default function Login() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
+              autoComplete="new-password"
               margin="dense"
               required
               fullWidth
